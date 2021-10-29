@@ -7,7 +7,7 @@ const Product = new Schema({
 })
 
 Product.pre('save', function(next){
-    
+    this.price = this.value / 0.81
     next()
 })
 
